@@ -1,4 +1,5 @@
 apply plugin: 'kotlin'
+apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: 'application'
 
 group 'main'
@@ -51,4 +52,12 @@ dependencies {
     // https://github.com/junit-team/junit5-samples/tree/master/junit5-jupiter-starter-gradle-kotlin
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.0")
     testImplementation("org.assertj:assertj-core:3.11.1")
+}
+
+shadowJar {
+    baseName = 'app'
+    // https://ktor.io/quickstart/quickstart/docker.html
+    // those parameters cause build fail
+    classifier = null
+    version = null
 }
