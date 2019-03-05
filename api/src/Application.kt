@@ -54,6 +54,8 @@ fun Application.module(testing: Boolean = false) {
 
     routing {
         get("/") {
+            val h = Hoge("hoge")
+            h.validate()
             call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
         }
 
