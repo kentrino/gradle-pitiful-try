@@ -1,9 +1,7 @@
 package io.konform.validation
 
+import kotlin.jvm.JvmName
 import kotlin.reflect.KProperty1
-
-// FIXME: Remove once JvmName is available in JS projects
-expect annotation class JvmName(val name: String)
 
 abstract class ValidationBuilder<T> {
     abstract fun build(): Validation<T>
