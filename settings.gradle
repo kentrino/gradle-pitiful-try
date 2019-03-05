@@ -1,2 +1,4 @@
 rootProject.name = 'root'
-include 'api', 'common'
+include 'api', 'common', 'konform-common'
+
+project(":konform-common").projectDir = new File('konform-common')

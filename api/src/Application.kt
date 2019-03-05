@@ -58,6 +58,8 @@ fun Application.module(testing: Boolean = false) {
         }
 
         get("/error") {
+            val h = Hoge("hoge")
+            h.validate()
             val f = Fuga()
             f.run()
             throw Exception("test")
