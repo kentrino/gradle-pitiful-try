@@ -8,3 +8,17 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
+
+subprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+project(":api") {
+    apply plugin: 'kotlin'
+
+    dependencies {
+        compile project(':common')
+    }
+}

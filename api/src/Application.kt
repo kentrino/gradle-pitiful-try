@@ -24,6 +24,8 @@ import org.koin.ktor.ext.inject
 import org.koin.ktor.ext.installKoin
 import java.util.*
 
+import jp.hoge.Fuga
+
 
 fun main(args: Array<String>) {
     embeddedServer(Netty, commandLineEnvironment(args)).start()
@@ -56,6 +58,8 @@ fun Application.module(testing: Boolean = false) {
         }
 
         get("/error") {
+            val f = Fuga()
+            f.run()
             throw Exception("test")
         }
     }
