@@ -1,0 +1,3 @@
+[submodule "konform"]
+	path = konform
+	url = git@github.com:justincase-jp/konform.git
